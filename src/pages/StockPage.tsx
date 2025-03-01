@@ -371,7 +371,7 @@ const StockPage = () => {
         </div>
       </div>
 
-      <div className="rounded-md border bg-white">
+      <div className="rounded-md border border-border bg-card">
         <div className="relative w-full overflow-auto">
           <Table>
             <TableHeader className="bg-muted/50">
@@ -389,8 +389,8 @@ const StockPage = () => {
                   <TableCell colSpan={materials.length + 2} className="h-24 text-center">
                     <div className="flex justify-center">
                       <div className="animate-pulse space-y-2">
-                        <div className="h-2.5 bg-gray-200 rounded-full w-24 mb-2.5"></div>
-                        <div className="h-2.5 bg-gray-200 rounded-full w-32"></div>
+                        <div className="h-2.5 bg-muted rounded-full w-24 mb-2.5"></div>
+                        <div className="h-2.5 bg-muted rounded-full w-32"></div>
                       </div>
                     </div>
                   </TableCell>

@@ -230,7 +230,7 @@ const PredictionPage = () => {
         </p>
       </div>
 
-      <Card className="bg-white">
+      <Card className="bg-card">
         <CardHeader className="bg-primary/5 pb-4">
           <CardTitle className="text-lg font-medium">Input Parameter</CardTitle>
         </CardHeader>
@@ -292,12 +292,12 @@ const PredictionPage = () => {
 
       {hasCalculated && predictionResults.length > 0 && (
         <>
-          <Card className="bg-white">
+          <Card className="bg-card">
             <CardHeader className="bg-primary/5 pb-4">
               <CardTitle className="text-lg font-medium">Hasil Perhitungan</CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
-              <div className="rounded-md border">
+              <div className="rounded-md border border-border">
                 <Table>
                   <TableHeader className="bg-muted/50">
                     <TableRow>
@@ -328,16 +328,16 @@ const PredictionPage = () => {
 
               {predictionSummary && (
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="p-4 bg-blue-50 rounded-lg">
-                    <p className="text-sm text-blue-700 font-medium">MAD (Mean Absolute Deviation)</p>
+                  <div className="p-4 bg-blue-50 dark:bg-blue-950 rounded-lg">
+                    <p className="text-sm text-blue-700 dark:text-blue-300 font-medium">MAD (Mean Absolute Deviation)</p>
                     <p className="text-2xl font-bold">{predictionSummary.mad.toFixed(2)}</p>
                   </div>
-                  <div className="p-4 bg-green-50 rounded-lg">
-                    <p className="text-sm text-green-700 font-medium">MSE (Mean Squared Error)</p>
+                  <div className="p-4 bg-green-50 dark:bg-green-950 rounded-lg">
+                    <p className="text-sm text-green-700 dark:text-green-300 font-medium">MSE (Mean Squared Error)</p>
                     <p className="text-2xl font-bold">{predictionSummary.mse.toFixed(2)}</p>
                   </div>
-                  <div className="p-4 bg-purple-50 rounded-lg">
-                    <p className="text-sm text-purple-700 font-medium">MAPE (Mean Absolute Percentage Error)</p>
+                  <div className="p-4 bg-purple-50 dark:bg-purple-950 rounded-lg">
+                    <p className="text-sm text-purple-700 dark:text-purple-300 font-medium">MAPE (Mean Absolute Percentage Error)</p>
                     <p className="text-2xl font-bold">{predictionSummary.mape.toFixed(2)}%</p>
                   </div>
                 </div>
@@ -346,12 +346,12 @@ const PredictionPage = () => {
           </Card>
 
           {nextPeriodPrediction && (
-            <Card className="bg-white">
+            <Card className="bg-card">
               <CardHeader className="bg-primary/5 pb-4">
                 <CardTitle className="text-lg font-medium">Hasil Prediksi</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
-                <div className="bg-gray-50 p-6 rounded-lg border">
+                <div className="bg-muted/20 p-6 rounded-lg border border-border">
                   <h3 className="text-lg font-medium mb-4">Bahan Baku</h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
@@ -363,7 +363,7 @@ const PredictionPage = () => {
                       <p className="text-xl font-semibold">{nextPeriodPrediction.period}</p>
                     </div>
                   </div>
-                  <div className="mt-6 pt-6 border-t">
+                  <div className="mt-6 pt-6 border-t border-border">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <p className="text-sm text-muted-foreground">Prediksi Stok</p>

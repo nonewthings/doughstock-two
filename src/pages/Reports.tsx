@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -184,7 +183,7 @@ const Reports = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-6">
-          <div className="rounded-md border overflow-x-auto">
+          <div className="rounded-md border border-border overflow-x-auto">
             <Table>
               <TableHeader className="bg-muted/50">
                 <TableRow>
@@ -201,8 +200,8 @@ const Reports = () => {
                     <TableCell colSpan={materials.length + 2} className="h-24 text-center">
                       <div className="flex justify-center">
                         <div className="animate-pulse space-y-2">
-                          <div className="h-2.5 bg-gray-200 rounded-full w-24 mb-2.5"></div>
-                          <div className="h-2.5 bg-gray-200 rounded-full w-32"></div>
+                          <div className="h-2.5 bg-muted rounded-full w-24 mb-2.5"></div>
+                          <div className="h-2.5 bg-muted rounded-full w-32"></div>
                         </div>
                       </div>
                     </TableCell>
