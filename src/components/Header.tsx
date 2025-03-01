@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { format } from "date-fns";
 import { useAuth } from "@/contexts/AuthContext";
 import { useToast } from "@/hooks/use-toast";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface HeaderProps {
   toggleSidebar: () => void;
@@ -33,25 +34,27 @@ const Header = ({ toggleSidebar, isSidebarOpen }: HeaderProps) => {
           variant="ghost" 
           size="icon" 
           onClick={toggleSidebar} 
-          className="text-white hover:bg-primary/80 mr-2"
+          className="text-primary-foreground hover:bg-primary/80 mr-2"
         >
           <Menu size={20} />
         </Button>
         <h1 className="text-xl font-semibold">Doughstock Optimizer</h1>
       </div>
 
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-2">
         <div className="hidden md:block text-sm">
           <span>Tanggal: </span>
           <span>{format(new Date(), "dd MMM yyyy")}</span>
         </div>
+        
+        <ThemeToggle />
         
         {user && (
           <Button 
             variant="ghost" 
             size="sm"
             onClick={handleSignOut}
-            className="text-white hover:bg-primary/80 flex items-center"
+            className="text-primary-foreground hover:bg-primary/80 flex items-center"
           >
             <LogOut size={16} className="mr-1" />
             <span className="hidden sm:inline">Logout</span>

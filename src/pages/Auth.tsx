@@ -47,13 +47,13 @@ const Auth = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-[#1A3C34] to-[#2D6E5D] p-4">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-primary/90 to-primary/60 p-4">
       <div className="w-full max-w-md">
-        <Card className="border-none shadow-xl overflow-hidden bg-white/95 backdrop-blur-sm">
-          <div className="bg-[#104E3C] h-1.5 w-full"></div>
+        <Card className="border-none shadow-xl overflow-hidden bg-card/95 backdrop-blur-sm">
+          <div className="bg-primary h-1.5 w-full"></div>
           <CardHeader className="space-y-2 text-center pt-10 pb-6">
-            <CardTitle className="text-3xl font-bold text-[#104E3C]">Doughstock Optimizer</CardTitle>
-            <CardDescription className="text-[#2D6E5D]/80">
+            <CardTitle className="text-3xl font-bold text-primary">Doughstock Optimizer</CardTitle>
+            <CardDescription className="text-muted-foreground">
               Sistem Manajemen Stok
             </CardDescription>
           </CardHeader>
@@ -61,9 +61,9 @@ const Auth = () => {
           <form onSubmit={handleSignIn}>
             <CardContent className="space-y-6 pt-4 px-8">
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm font-medium text-[#104E3C]">Email</Label>
+                <Label htmlFor="email" className="text-sm font-medium">Email</Label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-[#2D6E5D]/70">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-muted-foreground">
                     <User size={18} />
                   </div>
                   <Input
@@ -72,15 +72,15 @@ const Auth = () => {
                     placeholder="Email Admin"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10 border-[#104E3C]/20 focus-visible:ring-[#104E3C]/30 focus-visible:border-[#104E3C]/30"
+                    className="pl-10"
                     required
                   />
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="password" className="text-sm font-medium text-[#104E3C]">Password</Label>
+                <Label htmlFor="password" className="text-sm font-medium">Password</Label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-[#2D6E5D]/70">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-muted-foreground">
                     <Lock size={18} />
                   </div>
                   <Input
@@ -89,7 +89,7 @@ const Auth = () => {
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="pl-10 border-[#104E3C]/20 focus-visible:ring-[#104E3C]/30 focus-visible:border-[#104E3C]/30"
+                    className="pl-10"
                     required
                   />
                 </div>
@@ -97,7 +97,7 @@ const Auth = () => {
             </CardContent>
             <CardFooter className="flex flex-col gap-4 pb-10 px-8 pt-4">
               <Button 
-                className="w-full h-11 text-base font-medium bg-[#104E3C] hover:bg-[#0A3B2D] shadow-md hover:shadow-lg transition-all"
+                className="w-full h-11 text-base font-medium shadow-md hover:shadow-lg transition-all"
                 type="submit" 
                 disabled={loading}
               >
