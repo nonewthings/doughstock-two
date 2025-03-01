@@ -47,40 +47,40 @@ const Auth = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-[#F2FCE2] to-[#D3E4FD] p-4">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-[#1A3C34] to-[#2D6E5D] p-4">
       <div className="w-full max-w-md">
-        <Card className="border-none shadow-lg overflow-hidden bg-white">
-          <div className="bg-primary h-2 w-full"></div>
-          <CardHeader className="space-y-1 text-center pt-8">
-            <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-[#ff9d4d] bg-clip-text text-transparent">Doughstock Optimizer</CardTitle>
-            <CardDescription className="text-muted-foreground">
-              Sistem Manajemen Stok Bahan Baku Roti
+        <Card className="border-none shadow-xl overflow-hidden bg-white/95 backdrop-blur-sm">
+          <div className="bg-[#104E3C] h-1.5 w-full"></div>
+          <CardHeader className="space-y-2 text-center pt-10 pb-6">
+            <CardTitle className="text-3xl font-bold text-[#104E3C]">Doughstock Optimizer</CardTitle>
+            <CardDescription className="text-[#2D6E5D]/80">
+              Sistem Manajemen Stok
             </CardDescription>
           </CardHeader>
           
           <form onSubmit={handleSignIn}>
-            <CardContent className="space-y-5 pt-4">
+            <CardContent className="space-y-6 pt-4 px-8">
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm font-medium">Email Admin</Label>
+                <Label htmlFor="email" className="text-sm font-medium text-[#104E3C]">Email</Label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-muted-foreground">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-[#2D6E5D]/70">
                     <User size={18} />
                   </div>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="admin@example.com"
+                    placeholder="Email Admin"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10"
+                    className="pl-10 border-[#104E3C]/20 focus-visible:ring-[#104E3C]/30 focus-visible:border-[#104E3C]/30"
                     required
                   />
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="password" className="text-sm font-medium">Password</Label>
+                <Label htmlFor="password" className="text-sm font-medium text-[#104E3C]">Password</Label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-muted-foreground">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-[#2D6E5D]/70">
                     <Lock size={18} />
                   </div>
                   <Input
@@ -89,15 +89,15 @@ const Auth = () => {
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="pl-10"
+                    className="pl-10 border-[#104E3C]/20 focus-visible:ring-[#104E3C]/30 focus-visible:border-[#104E3C]/30"
                     required
                   />
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="flex flex-col gap-4 pb-8">
+            <CardFooter className="flex flex-col gap-4 pb-10 px-8 pt-4">
               <Button 
-                className="w-full h-11 text-base font-medium shadow-md hover:shadow-lg transition-all"
+                className="w-full h-11 text-base font-medium bg-[#104E3C] hover:bg-[#0A3B2D] shadow-md hover:shadow-lg transition-all"
                 type="submit" 
                 disabled={loading}
               >
@@ -107,12 +107,9 @@ const Auth = () => {
                     Memproses...
                   </>
                 ) : (
-                  "Masuk ke Sistem"
+                  "Masuk"
                 )}
               </Button>
-              <p className="text-xs text-center text-muted-foreground mt-2">
-                Sistem ini hanya dapat diakses oleh admin yang berwenang
-              </p>
             </CardFooter>
           </form>
         </Card>
