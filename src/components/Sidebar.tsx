@@ -40,12 +40,12 @@ const Sidebar = ({ isOpen, isMobile, toggleSidebar }: SidebarProps) => {
       {/* Sidebar */}
       <aside 
         className={cn(
-          "fixed top-0 left-0 h-full bg-white shadow-lg z-30 transition-all duration-300 ease-in-out",
+          "fixed top-0 left-0 h-full bg-card text-card-foreground shadow-lg z-30 transition-all duration-300 ease-in-out",
           isOpen ? "w-64 translate-x-0" : isMobile ? "-translate-x-full w-64" : "w-0",
           "flex flex-col"
         )}
       >
-        <div className="flex items-center justify-between py-5 px-4 border-b">
+        <div className="flex items-center justify-between py-5 px-4 border-b border-border">
           <div className="flex items-center space-x-2">
             <BarChart3 className="h-6 w-6 text-primary" />
             <h2 className="text-lg font-medium">DoughStock</h2>
@@ -72,7 +72,7 @@ const Sidebar = ({ isOpen, isMobile, toggleSidebar }: SidebarProps) => {
                   "flex items-center px-4 py-3 text-sm font-medium rounded-md transition-colors",
                   isActive 
                     ? "bg-primary/10 text-primary" 
-                    : "text-gray-700 hover:bg-gray-100"
+                    : "text-card-foreground hover:bg-muted/50"
                 )}
                 onClick={isMobile ? toggleSidebar : undefined}
               >
